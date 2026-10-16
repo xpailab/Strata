@@ -49,7 +49,7 @@ match the GFXOFF-off rows to the token). The one-card configurations ran at the 
 
 ## Model and configuration
 
-**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
 IQ3_S - the same two files setup downloads for its IQ3_S choice, packed with the repository's `tools/iq_pack.py` (no
 `--compat-bf16`); the SHA-256 hashes match the repository's `.sha256` files (they are listed in the 2026-10-05 report
 from this machine). The MTP draft layer was prepared with the repository's tools. The expert profile is the repository's

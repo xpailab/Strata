@@ -74,7 +74,7 @@ class Source(Base):
         self.assertEqual(setup.ms_file(HF_URL), (REPO, PATH))
         self.assertEqual(setup.ms_url(REPO, PATH),
                          "https://www.modelscope.cn/models/" + REPO + "/resolve/master/" + PATH)
-        self.assertIsNone(setup.ms_file("https://huggingface.co/someone/other/resolve/main/x.gguf"))
+        self.assertIsNone(setup.ms_file("https://hf-mirror.com/someone/other/resolve/main/x.gguf"))
         self.assertIsNone(setup.ms_file(setup.LLAMA_CPP_ZIP))
 
 

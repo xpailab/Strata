@@ -48,7 +48,7 @@ two metrics mean different things, see Methodology.
 
 ## Model and configuration
 
-Models from [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+Models from [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
 revision resolved by the installer at runtime:
 
 - IQ2_XS: `IQ2_XS/Qwen3.8-Flash-Next-GSQ-RCO-IQ2_XS-00001-of-00002.gguf`
@@ -59,7 +59,7 @@ revision resolved by the installer at runtime:
   `IQ3_XXS/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00002-of-00002.gguf` (shared PLE shard).
 
 MTP fetched by the installer from
-[Qwen/Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next); the
+[Qwen/Qwen3.8-Flash-Next](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next); the
 tensor-range manifest is in `/data/mtp/mtp-manifest.json` (and
 [`mtp-manifest.json`](mtp-manifest.json) in this PR's audit folder). Q2_0 MTP
 experts were selected, as configured in the install.sh defaults.

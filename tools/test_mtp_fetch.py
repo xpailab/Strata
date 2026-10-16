@@ -146,7 +146,7 @@ class Ranges(FetchCase):
     def test_an_inventory_from_another_revision_is_read_again(self):
         self.fetch(Mirror())
         inv = json.loads((self.out / "mtp-inventory.json").read_text())
-        inv["repo"] = "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/"
+        inv["repo"] = "https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next/resolve/main/"
         for r in inv["tensors"]:
             r["start"] += 1                        # that revision's ranges: not this one's
             r["end"] += 1
@@ -167,7 +167,7 @@ class Ranges(FetchCase):
         self.assertEqual(sorted(stamps), ["mtp.a", "mtp.b"])
         with mock.patch.object(M, "sha256_of", side_effect=AssertionError("hashed an unchanged file")):
             self.assertEqual(M.verify(str(self.out)), [])
-        with mock.patch.object(M, "REPO", "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/"):
+        with mock.patch.object(M, "REPO", "https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next/resolve/main/"):
             (self.out / "tensors" / "mtp.a.bin").write_bytes(b"x")
             self.assertEqual(M.verify(str(self.out)), [])          # STRATA_MTP_REVISION: other hashes
         self.assertEqual(M.verify(str(self.out)), ["mtp.a"])

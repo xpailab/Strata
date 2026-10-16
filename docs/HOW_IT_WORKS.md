@@ -59,10 +59,10 @@ The [details](DETAILS.md#how-it-works) explain every part and its numbers, and t
 
 ## Credits
 
-- Model: [Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) by the Qwen team; compressed versions by
-  [ISTA-DASLab](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF);
-  [Swift 1.5](https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF) by UkisAI; the experimental
-  [UD-Q4_K_XL](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF) by Unsloth (its support follows
+- Model: [Qwen3.8-Flash-Next](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next) by the Qwen team; compressed versions by
+  [ISTA-DASLab](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF);
+  [Swift 1.5](https://hf-mirror.com/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF) by UkisAI; the experimental
+  [UD-Q4_K_XL](https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF) by Unsloth (its support follows
   [eddoursul/Strata](https://github.com/eddoursul/Strata)). Their licenses apply to the model files.
 - Built with parts of [llama.cpp / ggml](https://github.com/ggml-org/llama.cpp) (MIT). Ideas from
   [Splash](https://github.com/incoai/splash), [ninfer](https://github.com/Neroued/ninfer) and

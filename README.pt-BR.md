@@ -9,7 +9,7 @@ Placa de vídeo NVIDIA ou AMD (12 GB ou mais) · Windows ou Linux · gratuito e 
 <sub>Um jardim com pagode em voxels, feito com um único prompt numa RTX 5070 com o Strata (IQ3_S, contexto de 128K) ·
 <a href="https://github.com/Niko1221/Strata/releases/download/v0.1.10/Pagoda.mp4">vídeo completo (49 s)</a></sub></p>
 
-O Strata roda o **[Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)** num PC comum. É um modelo
+O Strata roda o **[Qwen3.8-Flash-Next](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next)** num PC comum. É um modelo
 de IA grande e inteligente que normalmente precisa de um servidor. Ele conversa, escreve código, entende imagens e
 funciona com seus apps e agentes de programação. Nada sai do seu PC.
 
@@ -221,8 +221,8 @@ A explicação mais longa: [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md). Cada pa
 
 ## Créditos e licença
 
-O modelo é o [Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next), da equipe Qwen. Ele foi
-comprimido por [ISTA-DASLab](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF), UkisAI (Swift 1.5)
+O modelo é o [Qwen3.8-Flash-Next](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next), da equipe Qwen. Ele foi
+comprimido por [ISTA-DASLab](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF), UkisAI (Swift 1.5)
 e Unsloth. O Strata usa partes do [llama.cpp / ggml](https://github.com/ggml-org/llama.cpp). Todos os créditos:
 [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md#credits). O Strata é de código aberto sob a [MIT License](LICENSE).
 Algumas partes e todos os modelos têm licenças próprias ([quais](docs/HOW_IT_WORKS.md#license)).

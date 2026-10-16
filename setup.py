@@ -61,7 +61,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 WIN = os.name == "nt"
 # #214: every Hugging Face file comes from a fixed commit of its repository (the `sha` of
-# https://huggingface.co/api/models/<repo> when this was pinned), so a checkout installs the same files on any
+# https://hf-mirror.com/api/models/<repo> when this was pinned), so a checkout installs the same files on any
 # day.  A revision the repository no longer has falls back to its current files, with a message (download()).
 HF_REVISIONS = {
     "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",        # 2026-09-29
@@ -72,12 +72,12 @@ HF_REVISIONS = {
 }
 
 
-HF_DEFAULT = "https://huggingface.co"
+HF_DEFAULT = "https://hf-mirror.com"
 
 
 def hf_endpoint() -> str:
     """#495: the Hugging Face host - HF_ENDPOINT as huggingface_hub reads it (a mirror, e.g. https://hf-mirror.com),
-    else huggingface.co.  The pinned revisions and the SHA-256 checks are the same whichever host serves the files."""
+    else hf-mirror.com.  The pinned revisions and the SHA-256 checks are the same whichever host serves the files."""
     return (os.environ.get("HF_ENDPOINT") or "").strip().rstrip("/") or HF_DEFAULT
 
 
@@ -92,7 +92,7 @@ def hf_unpinned(url: str) -> str:
 
 
 # ModelScope (www.modelscope.cn) hosts every repository above under the same name, with the same file paths and
-# sizes, and is reachable from mainland China where huggingface.co often is not.  It serves a repository's current
+# sizes, and is reachable from mainland China where hf-mirror.com often is not.  It serves a repository's current
 # files (no pinned revision), so a file from it is checked against the SHA-256 ModelScope publishes for it, and the
 # MTP tensors against the pinned checkpoint's own hashes (tools/mtp_fetch.py).
 # --source / STRATA_SOURCE: huggingface (what auto means), or modelscope: only when asked for (a different host
@@ -132,7 +132,7 @@ def model_source() -> str:
 def source_hint(url: str) -> str:
     """The recommendation that goes with a failed download from Hugging Face: ModelScope, by an explicit choice."""
     if "huggingface" in url or "hf-mirror" in url:
-        return ("; if huggingface.co does not reach you (mainland China), the same files are on ModelScope: run setup "
+        return ("; if hf-mirror.com does not reach you (mainland China), the same files are on ModelScope: run setup "
                 "with --source modelscope (docs/INSTALL.md)")
     return ""
 
@@ -298,14 +298,14 @@ MODELS = {
                        "NVIDIA cards run it at 8-bit precision", "download_gb": 128.0, "ram_gb": 80, "arena_gb": 68.0,
               "families": ("nvfp4",), "nvidia_only": True, "vision": True, "repo": NVFP4_GPTQ_REPO,
               "engine": NVFP4_ENGINE,
-              "license": "Qwen Community License 1.0 (Qwen3.8-Flash-Next's): https://huggingface.co/Qwen/Qwen3.8-Flash-Next"},
+              "license": "Qwen Community License 1.0 (Qwen3.8-Flash-Next's): https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next"},
     "NVFP4-NVIDIA": {"about": "NVIDIA's own NVFP4 checkpoint (plain rounding), converted by sergqwer; the same size "
                               "and speed as NVFP4", "download_gb": 128.0, "ram_gb": 80, "arena_gb": 68.0,
                      "families": ("nvfp4",), "nvidia_only": True, "vision": True, "repo": NVFP4_NVIDIA_REPO,
                      "engine": NVFP4_ENGINE,
                      "license": "NVIDIA Open Model License (Licensed by NVIDIA Corporation under the NVIDIA Open Model "
                                 "License) with Qwen3.8-Flash-Next's Qwen Community License 1.0: "
-                                "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4"},
+                                "https://hf-mirror.com/nvidia/Qwen3.8-Flash-Next-NVFP4"},
 }
 # The experimental Unsloth file's four shards at the pinned revision: name -> (bytes, sha256), checked after the
 # download (setup trusts no other model file by name and size alone either: check_shards reads their directories).
@@ -393,7 +393,7 @@ FAMILIES = {
               "file": "Swift-Qwen3.8-Flash-Next-GSQ-RCO-{q}-0000{i}-of-00002.gguf", "tag": "swift-",
               "mmproj_hf": hf("ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF"),
               "mmproj": "mmproj-Swift-Qwen3.8-Flash-Next-BF16.gguf", "name": "swift-1.5",
-              "license": "Swift Open License 1.0: https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF"},
+              "license": "Swift Open License 1.0: https://hf-mirror.com/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF"},
     # ISTA-DASLab's expert-pruned release: half of each layer's experts removed, chosen for code, agentic tool use and
     # vision; its shard 2 (the n-gram table) and vision encoder are the original's files, shared with it
     "coder": {"title": "Qwen3.8-Flash-Next Coder", "by": "ISTA-DASLab's coding version",
@@ -441,7 +441,7 @@ OWN_PATH_FAMILIES = {
                         "Qwen3.8-Flash-Next with the same tokenizer",
                "hf": hf("unsloth/Qwen3.6-35B-A3B-MTP-GGUF"), "file": "Qwen3.6-35B-A3B-{q}.gguf", "tag": "qwen36-",
                "mmproj_hf": hf("unsloth/Qwen3.6-35B-A3B-MTP-GGUF"), "mmproj": "mmproj-F16.gguf",
-               "name": "qwen3.6-35b-a3b", "license": "Apache 2.0: https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+               "name": "qwen3.6-35b-a3b", "license": "Apache 2.0: https://hf-mirror.com/Qwen/Qwen3.6-35B-A3B",
                # RAM: the engine keeps a copy of every expert in RAM when they do not all fit in VRAM (the hybrid mode),
                # so the file's size plus room for the OS and the rest (measured: UD-Q4_K_XL on a 46 GB PC with a 12 GB
                # card, 18.75 GiB of experts pinned)

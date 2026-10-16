@@ -39,7 +39,7 @@ performance on other workloads.
 
 ## Model and configuration
 
-**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
 IQ3_S - the same two files setup downloads for its IQ3_S choice, downloaded on 2026-09-30 and packed by hand on
 2026-10-04 with the repository's `tools/iq_pack.py` (no `--compat-bf16`). The SHA-256 hashes match the repository's
 `.sha256` files:

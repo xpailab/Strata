@@ -47,7 +47,7 @@ projections. The controlled Q2_0 run below measures that table separately.
 
 ## Q2_0
 
-Model: [Qwen3.8-Flash-Next-GSQ-RCO-Q2_0](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF)
+Model: [Qwen3.8-Flash-Next-GSQ-RCO-Q2_0](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF)
 
 ### Long matching prompts
 
@@ -72,7 +72,7 @@ result, not a kernel-only benchmark.
 
 ## Unsloth UD-IQ4_XS
 
-Model: [Qwen3.8-Flash-Next-UD-IQ4_XS](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF), three shards. Both servers used a 65,536-token context.
+Model: [Qwen3.8-Flash-Next-UD-IQ4_XS](https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF), three shards. Both servers used a 65,536-token context.
 
 | Prompt order | Strata HIP | llama.cpp Vulkan | Strata difference |
 |---:|---:|---:|---:|

@@ -4,7 +4,7 @@
 newer: every expert in RAM from ~118 GB, else it asks and keeps a RAM budget; quality, speed and images in
 [QUANTS.md](QUANTS.md); UD-Q5_K_XL and Q8_0 likewise). The manual workflow below still works. This is Unsloth's 6-bit
 file of the same model the other packs use:
-[unsloth/Qwen3.8-Flash-Next-GGUF, `UD-Q6_K_XL`, revision `38bb39e`](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/tree/38bb39ee97821de2c9009abb7e93950eec396e66/UD-Q6_K_XL).
+[unsloth/Qwen3.8-Flash-Next-GGUF, `UD-Q6_K_XL`, revision `38bb39e`](https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/tree/38bb39ee97821de2c9009abb7e93950eec396e66/UD-Q6_K_XL).
 Build it for engine 0.1.38 or newer (earlier engines read `per_layer_token_embd.weight` in IQ4_NL, Q5_0 or FP8 only,
 below). UD-Q4_K_XL's manual workflow asks nothing of setup, and neither does this one.
 
@@ -15,7 +15,7 @@ below). UD-Q4_K_XL's manual workflow asks nothing of setup, and neither does thi
 
 ## What is in the file
 
-Six shards, 169,165,382,688 bytes (169.2 GB) together ([sizes and SHA-256 from the HF tree API](https://huggingface.co/api/models/unsloth/Qwen3.8-Flash-Next-GGUF/tree/38bb39ee97821de2c9009abb7e93950eec396e66/UD-Q6_K_XL);
+Six shards, 169,165,382,688 bytes (169.2 GB) together ([sizes and SHA-256 from the HF tree API](https://hf-mirror.com/api/models/unsloth/Qwen3.8-Flash-Next-GGUF/tree/38bb39ee97821de2c9009abb7e93950eec396e66/UD-Q6_K_XL);
 shards 1, 2 and 6 were also checked bit for bit against their Hugging Face LFS hashes after download). Shard 1 holds
 only metadata; shard 2 only the output head (`output.weight`, `output_hc_*`, all Q8_0 but `output_hc_norm`, F32);
 shard 3 is exactly the PLE table, nothing else.

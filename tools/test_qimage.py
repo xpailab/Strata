@@ -38,7 +38,7 @@ class Pins(unittest.TestCase):
             self.assertIn(repo, QI.REVISIONS, name)
             self.assertRegex(sha, r"^[0-9a-f]{64}$")
             self.assertGreater(size, 100 << 20)
-        self.assertEqual(QI.file_url("Q8_0"), "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF/resolve/"
+        self.assertEqual(QI.file_url("Q8_0"), "https://hf-mirror.com/unsloth/Qwen-Image-2.1-Turbo-GGUF/resolve/"
                          "5d1f9f759ea877ae556cda88dbec958b62ad3809/qwen-image-2.1-turbo-Q8_0.gguf")
         self.assertEqual(QI.local_path(Path("m"), "vae"),
                          Path("m") / "qwen-image-2.1-turbo" / "qwen_image_2.1_vae_bf16.safetensors")

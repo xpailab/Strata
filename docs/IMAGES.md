@@ -1,13 +1,13 @@
 # Image generation (Qwen-Image-2.1-Turbo)
 
 Strata's server can also make images: `POST /v1/images/generations`, OpenAI's images API. The model is
-[Qwen-Image-2.1-Turbo](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo) (8 steps, CFG 1) in
-[Unsloth's GGUF quants](https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF), run by
+[Qwen-Image-2.1-Turbo](https://hf-mirror.com/Qwen/Qwen-Image-2.1-Turbo) (8 steps, CFG 1) in
+[Unsloth's GGUF quants](https://hf-mirror.com/unsloth/Qwen-Image-2.1-Turbo-GGUF), run by
 [stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp) (`sd-cli`), which setup compiles for your GPU.
 It is optional and off unless you ask for it.
 
 The model is under the **Qwen Research License**, not Apache 2.0: read
-[its license](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/blob/main/LICENSE) before you use the images
+[its license](https://hf-mirror.com/Qwen/Qwen-Image-2.1-Turbo/blob/main/LICENSE) before you use the images
 commercially.
 
 ## Set it up

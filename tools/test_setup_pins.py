@@ -82,7 +82,7 @@ class HuggingFacePins(unittest.TestCase):
     def test_unpinned(self):
         url = setup.FAMILIES["swift"]["hf"] + "x.gguf"
         self.assertEqual(setup.hf_unpinned(url),
-                         "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/main/x.gguf")
+                         "https://hf-mirror.com/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/main/x.gguf")
         self.assertEqual(setup.hf_unpinned("https://example.com/a/b"), "https://example.com/a/b")
 
     def test_a_gone_revision_downloads_the_current_file(self):
@@ -136,7 +136,7 @@ class HuggingFacePins(unittest.TestCase):
         try:
             with mock.patch.object(mtp_fetch.urllib.request, "urlopen", urlopen), \
                     contextlib.redirect_stderr(io.StringIO()) as err:
-                self.assertEqual(mtp_fetch.resolve_repo(), "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/")
+                self.assertEqual(mtp_fetch.resolve_repo(), "https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next/resolve/main/")
             self.assertIn("pinned revision", err.getvalue())
         finally:
             mtp_fetch.REPO = pinned
@@ -146,7 +146,7 @@ class HuggingFacePins(unittest.TestCase):
         repo = "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF"
         with mock.patch.dict(setup.os.environ, {}, clear=False):
             setup.os.environ.pop("HF_ENDPOINT", None)
-            self.assertEqual(setup.hf(repo), f"https://huggingface.co/{repo}/resolve/{setup.HF_REVISIONS[repo]}/")
+            self.assertEqual(setup.hf(repo), f"https://hf-mirror.com/{repo}/resolve/{setup.HF_REVISIONS[repo]}/")
             for value in ("https://hf-mirror.com", "https://hf-mirror.com/", " https://hf-mirror.com/ "):
                 setup.os.environ["HF_ENDPOINT"] = value
                 url = setup.hf(repo)
@@ -154,7 +154,7 @@ class HuggingFacePins(unittest.TestCase):
                 self.assertRegex(url, SHA)
                 self.assertEqual(setup.hf_unpinned(url + "x.gguf"), f"https://hf-mirror.com/{repo}/resolve/main/x.gguf")
             setup.os.environ["HF_ENDPOINT"] = ""
-            self.assertEqual(setup.hf_endpoint(), "https://huggingface.co")
+            self.assertEqual(setup.hf_endpoint(), "https://hf-mirror.com")
 
     def test_mtp_fetch_honours_hf_endpoint(self):
         import importlib
@@ -167,7 +167,7 @@ class HuggingFacePins(unittest.TestCase):
                 self.assertTrue(mtp_fetch.pinned())                 # the tensors' SHA-256 checks still apply
         finally:
             importlib.reload(mtp_fetch)
-        self.assertTrue(mtp_fetch.REPO.startswith("https://huggingface.co/"))
+        self.assertTrue(mtp_fetch.REPO.startswith("https://hf-mirror.com/"))
 
     def test_step5_names_the_folder(self):
         # #495: where setup expects the model files, and how to give it files downloaded by hand

@@ -37,7 +37,7 @@ Strata version.
 
 ## Model and configuration
 
-- [ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+- [ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://hf-mirror.com/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
   revision `b22d729eae29b5796f76fb70f91aef549b9fc52c`, split **IQ3_XXS** GGUF.
   Both exact filenames, lengths and verified SHA-256 hashes are in provenance.
   GGUF hashes were verified on 2026-10-01; the same artifacts were retained.

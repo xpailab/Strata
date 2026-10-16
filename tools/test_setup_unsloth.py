@@ -41,7 +41,7 @@ class Pins(unittest.TestCase):
         for _, sha in setup.UNSLOTH_SHARDS.values():
             self.assertRegex(sha, r"^[0-9a-f]{64}$")
         self.assertEqual(fam["hf"].format(q=M),
-                         f"https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/UD-Q4_K_XL/")
+                         f"https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/UD-Q4_K_XL/")
         self.assertEqual(setup.MODELS[M]["families"], ("unsloth",))   # no other family lists it
         self.assertFalse(setup.MODELS[M].get("experimental"))         # MODEL-UPDATE Phase 2: official
         self.assertFalse(fam.get("experimental"))
@@ -220,7 +220,7 @@ class Main(Base):
         code, out, cfg = self.main(["--context", "8192"])
         self.assertEqual(code, 0, out)
         self.assertNotIn("EXPERIMENTAL", out)
-        base = f"https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/UD-Q4_K_XL/"
+        base = f"https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/UD-Q4_K_XL/"
         self.assertEqual(self.downloads, [base + n for n in setup.UNSLOTH_SHARDS])   # no image encoder
         self.assertEqual([v[0] for v in self.verified], list(setup.UNSLOTH_SHARDS))
         self.assertEqual([v[1:] for v in self.verified], list(setup.UNSLOTH_SHARDS.values()))
@@ -471,7 +471,7 @@ class IQ4XS(Base):
         code, out, cfg = self.main(["--context", "8192"], version="0.1.38", m=X)
         self.assertEqual(code, 0, out)
         self.assertNotIn("is EXPERIMENTAL", out)                               # (the menu still lists UD-Q4_K_XL)
-        base = f"https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/UD-IQ4_XS/"
+        base = f"https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/UD-IQ4_XS/"
         self.assertEqual(self.downloads, [base + n for n in setup.UNSLOTH_IQ4_XS_SHARDS])
         self.assertEqual(self.verified, [(n, *v) for n, v in setup.UNSLOTH_IQ4_XS_SHARDS.items()])
         packs = [r for r in self.runs if r[1].endswith("iq_pack.py")]
@@ -822,7 +822,7 @@ class BigFiles(Base):
     def test_install_q8_at_192_gb(self):
         code, out, cfg = self.main(["--context", "32768"], ram=191.0, version="0.1.44", m=Q8)
         self.assertEqual(code, 0, out)
-        base = f"https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/Q8_0/"
+        base = f"https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/{REV}/Q8_0/"
         names = [setup.model_file(setup.FAMILIES["unsloth"], Q8, i) for i in range(1, 7)]
         self.assertEqual(self.downloads, [base + n for n in names])
         self.assertEqual([v[0] for v in self.verified], names)

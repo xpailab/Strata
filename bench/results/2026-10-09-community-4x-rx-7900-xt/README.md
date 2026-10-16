@@ -26,7 +26,7 @@ beyond recall; four cards on an asymmetric Gen3 PCIe layout (below).
 
 ## Model and configuration
 
-- Model: [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+- Model: [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
   folder `IQ3_S`; files identical to revision `ed59f92` (byte sizes and LFS sha256 match; downloaded 2026-10-07)
 - GGUF files, sha256 checked against the Hub's LFS hashes (read with `O_DIRECT`):
   - `Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf`, 54,817,524,224 bytes, sha256 `4c1eb2ceb4915e1192f4f386021897bde56a97f40a0bb78bb86465e0f7d2aca3`, matches

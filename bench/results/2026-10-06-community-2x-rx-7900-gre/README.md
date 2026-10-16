@@ -68,7 +68,7 @@ config decoded at 68.3 tok/s, two at once totalled 56.6 and four at once 64.6.
 
 ## Model and configuration
 
-- **Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF),
+- **Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF),
   IQ1_M, 48 layers / 5,376 routed experts (the profile counts 12,288 ranked pairs). The repository
   revision was not recorded; the files were downloaded 2026-09-30 20:29-20:36:
   - `Qwen3.8-Flash-Next-GSQ-RCO-IQ1_M-00001-of-00002.gguf` 29,608,446,496 B (29.6 GB / 27.6 GiB),

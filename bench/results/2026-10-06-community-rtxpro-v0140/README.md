@@ -98,7 +98,7 @@ per_layer_token_embd.weight is Q8_0, not IQ4_NL, Q5_0 or FP8 (I8)
 
 ## Placement and request settings
 
-The models are from [unsloth/Qwen3.8-Flash-Next-GGUF](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF):
+The models are from [unsloth/Qwen3.8-Flash-Next-GGUF](https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF):
 four `Qwen3.8-Flash-Next-UD-Q4_K_XL-*.gguf` shards or six
 `Qwen3.8-Flash-Next-Q8_0-*.gguf` shards. Existing compatibility packs were reused:
 small unsupported projections were converted to BF16. Their hashes and the

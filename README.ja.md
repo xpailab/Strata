@@ -9,7 +9,7 @@ NVIDIA または AMD のグラフィックカード（12 GB 以上） · Windows
 <sub>五重塔のある庭をボクセルで表現。RTX 5070 で動かした Strata（IQ3_S、コンテキスト長 128K）に、1 回のプロンプトで作成を依頼 ·
 <a href="https://github.com/Niko1221/Strata/releases/download/v0.1.10/Pagoda.mp4">動画を見る（全編 49 秒）</a></sub></p>
 
-Strata を使うと、**[Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)** を一般的な PC で動かせます。
+Strata を使うと、**[Qwen3.8-Flash-Next](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next)** を一般的な PC で動かせます。
 通常はサーバーを必要とする大規模で高性能な AI モデルで、チャットやコードの生成、画像の読み取りができます。
 アプリやコーディングエージェントとも連携でき、データは PC の外に送信されません。
 
@@ -216,8 +216,8 @@ NVIDIA でも AMD でも手順は同じです。インストーラーがカー�
 
 ## クレジットとライセンス
 
-使用しているモデルは、Qwen チームが開発した [Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) です。
-[ISTA-DASLab](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF)、UkisAI（Swift 1.5）、Unsloth が提供する圧縮版を利用しています。
+使用しているモデルは、Qwen チームが開発した [Qwen3.8-Flash-Next](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next) です。
+[ISTA-DASLab](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF)、UkisAI（Swift 1.5）、Unsloth が提供する圧縮版を利用しています。
 Strata は [llama.cpp / ggml](https://github.com/ggml-org/llama.cpp) の一部も使用しています。クレジットの一覧は
 [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md#credits)をご覧ください。Strata は [MIT License](LICENSE) で公開されていますが、一部の構成要素と
 各モデルには、それぞれ別のライセンスが適用されます（[ライセンスの詳細](docs/HOW_IT_WORKS.md#license)）。

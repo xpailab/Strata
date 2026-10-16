@@ -11,27 +11,27 @@
   "models": [
     {
       "filename": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "url": "https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
       "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082"
     },
     {
       "filename": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "url": "https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
       "sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9"
     },
     {
       "filename": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "url": "https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
       "sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3"
     },
     {
       "filename": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "url": "https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
       "sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a"
     },
     {
       "filename": "mmproj-F16.gguf",
-      "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/mmproj-F16.gguf",
+      "url": "https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/c8b5954a88c2775c546b92593eda40ea041d3176/mmproj-F16.gguf",
       "sha256": "1f7b7f0b984cf065c604360c29c8098362ed61b290db0ff12c6f360bb1a8a980"
     }
   ],

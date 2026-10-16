@@ -35,7 +35,7 @@ run was deliberately split into short segments rather than one long sweep.
 
 ## Model and configuration
 
-- **Model:** [`SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF`](https://huggingface.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF),
+- **Model:** [`SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF`](https://hf-mirror.com/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF),
   quantization **Q2_0**, shard 1 `Qwen3.8-Flash-Next-GSQ-RCO-abliterated-Q2_0-00001-of-00002.gguf`
   (38,021,379,872 bytes, sha256 `1620faf2…4647e`, verified against the Hugging Face LFS id), shard 2
   `…-00002-of-00002.gguf` (28,800,138,432 bytes, sha256 `316b46f3…1e113`). Shard 2 is shared with the

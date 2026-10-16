@@ -27,7 +27,7 @@ This uses native Windows HIP, **not** Vulkan inference or an engine running in W
 
 ## Model artifacts
 
-Both models came from [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF).
+Both models came from [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF).
 
 | Quant | GGUF filename | Bytes |
 | --- | --- | ---: |

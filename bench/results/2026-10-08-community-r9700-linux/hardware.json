@@ -38,7 +38,7 @@
     "0000:a3:00.0": 32
   },
   "vram_scope": "Request-boundary process snapshots, not continuous peak",
-  "mtp_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/de4b8e4d43b917e7706784d8bb445c9af86a3540/",
+  "mtp_source": "https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next/resolve/de4b8e4d43b917e7706784d8bb445c9af86a3540/",
   "mtp_expert_quant": "q2_0",
   "source_asset_inventory": "evidence/iq3s-assets.json"
 }

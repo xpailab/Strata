@@ -18,7 +18,7 @@ is a fresh engine process (no prompt reuse, cold expert cache start).
 
 ## Model and configuration
 
-- Model: [unsloth/Qwen3.8-Flash-Next-GGUF](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF) UD-IQ4_XS
+- Model: [unsloth/Qwen3.8-Flash-Next-GGUF](https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF) UD-IQ4_XS
   (`Qwen3.8-Flash-Next-UD-IQ4_XS-0000{1,2,3}-of-00003.gguf`); no vision encoder
 - Pack: built with `tools/iq_pack.py --compat-bf16` (a pack rebuilt with v0.1.41's tool measured the same); MTP draft
   layer `mtp/rt`; expert profile `data/expert-profile.bin`

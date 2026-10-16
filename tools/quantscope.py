@@ -34,8 +34,8 @@ from collections import defaultdict
 HUBS = {
     "ms": ("https://modelscope.cn/api/v1/models/{repo}/repo/files?Recursive=true",
            "https://modelscope.cn/models/{repo}/resolve/master/{path}"),
-    "hf": ("https://huggingface.co/api/models/{repo}/tree/main?recursive=true",
-           "https://huggingface.co/{repo}/resolve/main/{path}"),
+    "hf": ("https://hf-mirror.com/api/models/{repo}/tree/main?recursive=true",
+           "https://hf-mirror.com/{repo}/resolve/main/{path}"),
 }
 if os.environ.get("HF_ENDPOINT"):
     base = os.environ["HF_ENDPOINT"].rstrip("/")

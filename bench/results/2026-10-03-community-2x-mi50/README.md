@@ -29,7 +29,7 @@ other workloads.
 
 ## Model and configuration
 
-**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF),
+**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF),
 IQ1_M. The repository revision was not recorded; the shard SHA-256 hashes matched the `.sha256` files downloaded
 with them:
 

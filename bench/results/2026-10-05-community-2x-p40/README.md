@@ -29,7 +29,7 @@ synthetic and greedy; they do not establish general answer quality or performanc
 
 ## Model and configuration
 
-**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF) at revision `ed59f92082b1e93c0e96d60a8b11aab089b52f09`, IQ2_XS (the revision setup pins). Hashes are the Hugging Face LFS SHA-256 values at that revision;
+**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF) at revision `ed59f92082b1e93c0e96d60a8b11aab089b52f09`, IQ2_XS (the revision setup pins). Hashes are the Hugging Face LFS SHA-256 values at that revision;
 the files were downloaded by setup, which checks only their structure. They were not re-hashed locally, and the files were deleted afterwards:
 
 - `Qwen3.8-Flash-Next-GSQ-RCO-IQ2_XS-00001-of-00002.gguf` 39,225,954,592 bytes `92cee27ae5bbadcd732416a0f7a7f0acc092399dbbe8f5a5efa707c2ec0a49d7`

@@ -6,7 +6,7 @@ Windows 10, an RTX 5070 (12 GB), 64 GB of RAM and an AVX-512 CPU (2026-10-01); s
 expert in RAM) and an RTX A4000 (62 GB, the RAM budget) - quality, speed and images in [QUANTS.md](QUANTS.md).
 
 The target is Unsloth's 4-bit quantization of the same model the other packs use:
-[unsloth/Qwen3.8-Flash-Next-GGUF, `UD-Q4_K_XL`, revision `38bb39e`](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/tree/38bb39ee97821de2c9009abb7e93950eec396e66/UD-Q4_K_XL).
+[unsloth/Qwen3.8-Flash-Next-GGUF, `UD-Q4_K_XL`, revision `38bb39e`](https://hf-mirror.com/unsloth/Qwen3.8-Flash-Next-GGUF/tree/38bb39ee97821de2c9009abb7e93950eec396e66/UD-Q4_K_XL).
 "UD-Q4_K_XL" is a mix of formats, not Q4_K everywhere: the routed experts are Q4_K (Q5_K in layer 2) for gate/up and
 Q5_1 (Q8_0 in layers 2, 4, 30, 46, 47) for down; the token embedding, the output head, the attention and shared-expert
 projections and the PLE key are Q8_0; the 28.8 GB PLE table is IQ4_NL. The routed experts are 71.7 GiB, about twice
@@ -267,7 +267,7 @@ closes most of that gap; it is measured on AMD only and not in this release.
 
 A plain `llama-quantize` Q4_0 file of this model runs the same way: pack shard 1 with `--compat-bf16` as above and
 point `--native` at it. Tested:
-[bartowski/Qwen3.8-Flash-Next-GGUF, `Qwen3.8-Flash-Next-Q4_0`, revision `928589f`](https://huggingface.co/bartowski/Qwen3.8-Flash-Next-GGUF/tree/928589fdb66c6ff07f22ac561e3fbce76553548f/Qwen3.8-Flash-Next-Q4_0)
+[bartowski/Qwen3.8-Flash-Next-GGUF, `Qwen3.8-Flash-Next-Q4_0`, revision `928589f`](https://hf-mirror.com/bartowski/Qwen3.8-Flash-Next-GGUF/tree/928589fdb66c6ff07f22ac561e3fbce76553548f/Qwen3.8-Flash-Next-Q4_0)
 (3 shards, 100.6 GB). Its routed experts are Q4_0 for gate/up and for down, except down in layers 0-5, which is Q4_1;
 the PLE table and the token embedding are Q4_0. The pack serves 302 tensors from the GGUF as stored and converts 362
 (168 exact, 194 rounded to BF16, largest absolute error 0.0156; 1.23 GiB).
@@ -312,5 +312,5 @@ whose header shows the same formats.
 The split-artifact loader, the expert formats' GPU kernels and the packing of Unsloth's files follow
 [eddoursul/Strata](https://github.com/eddoursul/Strata) (PR #245), which ran these files first. The Q8_0 kernels, the
 per-role shard column and the PLE convolution's F32 -> F16 fix come from @gopinath87607's PR #255; per-role shard names
-were also proposed by @jagsan-cyber in PR #247. The quantization is [Unsloth](https://huggingface.co/unsloth)'s; the
-model is Qwen's ([license](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)).
+were also proposed by @jagsan-cyber in PR #247. The quantization is [Unsloth](https://hf-mirror.com/unsloth)'s; the
+model is Qwen's ([license](https://hf-mirror.com/Qwen/Qwen3.8-Flash-Next)).

@@ -21,7 +21,7 @@ The engine runs natively on Windows, not Vulkan or WSL. The wrapper checkout is 
 
 ## Model and configuration
 
-Models: [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF), **IQ2_XS and IQ3_XXS**, using the existing prepared packs and Q2_0 MTP runtime pack. Exact filenames, sizes, available revision metadata, and provenance gaps are in [METHODS.md](METHODS.md#model-artifacts).
+Models: [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF), **IQ2_XS and IQ3_XXS**, using the existing prepared packs and Q2_0 MTP runtime pack. Exact filenames, sizes, available revision metadata, and provenance gaps are in [METHODS.md](METHODS.md#model-artifacts).
 
 Common engine settings, with machine-specific paths omitted:
 

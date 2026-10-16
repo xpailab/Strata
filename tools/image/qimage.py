@@ -34,7 +34,7 @@ VULKAN_SDK_URL = (f"https://sdk.lunarg.com/sdk/download/{VULKAN_SDK_VERSION}/lin
 VULKAN_SDK_SIZE = 366_564_872
 VULKAN_SDK_SHA256 = "197962f5cbf80baf2775a03336a01cee7c8745686c65aaa70d3f751ade4d7e43"
 
-REVISIONS = {                                       # the `sha` of https://huggingface.co/api/models/<repo>, 2026-10-12
+REVISIONS = {                                       # the `sha` of https://hf-mirror.com/api/models/<repo>, 2026-10-12
     "unsloth/Qwen-Image-2.1-Turbo-GGUF": "5d1f9f759ea877ae556cda88dbec958b62ad3809",
     "unsloth/Qwen-Image-2.1-FP8": "bb21a8ba7f0371c19ad1f72c82a5e8fc10f39939",
     "unsloth/Qwen3-VL-8B-Instruct-GGUF": "b93a7ee713758252c555be4210c00540df954dc2",
@@ -56,7 +56,7 @@ FILES = {
 QUANTS = ("Q4_K_M", "Q6_K", "Q8_0")
 BACKENDS = ("cuda", "hip", "vulkan", "cpu")
 LICENSE_NOTE = ("Qwen-Image-2.1-Turbo is under the Qwen Research License (not Apache 2.0): "
-                "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/blob/main/LICENSE - read it before you use the images "
+                "https://hf-mirror.com/Qwen/Qwen-Image-2.1-Turbo/blob/main/LICENSE - read it before you use the images "
                 "commercially")
 MODEL_DIR = "qwen-image-2.1-turbo"
 SD_EXE = "sd-cli.exe" if os.name == "nt" else "sd-cli"
@@ -104,7 +104,7 @@ def default_args(backend: str) -> list[str]:
     return ["--diffusion-fa"] + (["--vae-tiling", "--vae-tile-overlap", "0.25"] if backend == "vulkan" else [])
 
 
-def file_url(name: str, endpoint: str = "https://huggingface.co") -> str:
+def file_url(name: str, endpoint: str = "https://hf-mirror.com") -> str:
     repo, path, _, _ = FILES[name]
     return f"{endpoint.rstrip('/')}/{repo}/resolve/{REVISIONS[repo]}/{path}"
 

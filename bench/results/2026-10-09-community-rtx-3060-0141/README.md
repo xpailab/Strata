@@ -16,7 +16,7 @@ See [environment](environment.json), [hardware](hardware-windows.json).
 
 ## Models and exact configurations
 
-Repository [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/tree/ed59f92082b1e93c0e96d60a8b11aab089b52f09), revision `ed59f92082b1e93c0e96d60a8b11aab089b52f09`. Original Flash-Next Q2_0, IQ2_XS, IQ3_XXS and IQ3_S. GGUF names follow `Qwen3.8-Flash-Next-GSQ-RCO-<quant>-00001-of-00002.gguf` and `...-00002-of-00002.gguf`. All eight size/SHA-256 pairs were checked against pinned public Hub metadata; tokenizer files match across all four models. See [manifest](model-manifest.json).
+Repository [ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/tree/ed59f92082b1e93c0e96d60a8b11aab089b52f09), revision `ed59f92082b1e93c0e96d60a8b11aab089b52f09`. Original Flash-Next Q2_0, IQ2_XS, IQ3_XXS and IQ3_S. GGUF names follow `Qwen3.8-Flash-Next-GSQ-RCO-<quant>-00001-of-00002.gguf` and `...-00002-of-00002.gguf`. All eight size/SHA-256 pairs were checked against pinned public Hub metadata; tokenizer files match across all four models. See [manifest](model-manifest.json).
 
 The IQ3 resident `experts.bin` files were generated from those GGUFs using official `tools/iq_pack.py --experts-bin`, without changing weights. Sizes: IQ3_XXS 42,912,972,800 bytes; IQ3_S 50,292,326,400 bytes. Pack hashes: [pack manifest](resident-pack-manifest.json).
 

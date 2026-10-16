@@ -37,7 +37,7 @@ output cap. They do not establish general answer quality or performance on other
 ## Model and configuration
 
 **Model:** the original Qwen3.8-Flash-Next from
-[`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+[`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
 IQ2_XS, downloaded by setup. The repository revision was not recorded. SHA-256 of the shards as used:
 
 - `Qwen3.8-Flash-Next-GSQ-RCO-IQ2_XS-00001-of-00002.gguf` `92cee27ae5bbadcd732416a0f7a7f0acc092399dbbe8f5a5efa707c2ec0a49d7`

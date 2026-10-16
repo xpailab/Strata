@@ -68,11 +68,11 @@ class Header(G.GGUFFile):
 
 
 def hf_headers(repo: str, rev: str, d: str) -> list[Header]:
-    tree = json.load(urllib.request.urlopen(f"https://huggingface.co/api/models/{repo}/tree/{rev}/{d}", timeout=60))
+    tree = json.load(urllib.request.urlopen(f"https://hf-mirror.com/api/models/{repo}/tree/{rev}/{d}", timeout=60))
     out = []
     for e in sorted(tree, key=lambda e: e["path"]):
         if e["type"] == "file" and e["path"].endswith(".gguf"):
-            url = f"https://huggingface.co/{repo}/resolve/{rev}/{e['path']}"
+            url = f"https://hf-mirror.com/{repo}/resolve/{rev}/{e['path']}"
             out.append(Header(e["path"], RangeFile(url)))
     return out
 

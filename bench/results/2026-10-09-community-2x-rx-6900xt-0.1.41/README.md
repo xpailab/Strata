@@ -54,7 +54,7 @@ Unchanged from the 0.1.40.1 report except the engine:
 
 ## Model and configuration
 
-**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
+**Model:** [`ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF`](https://hf-mirror.com/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF),
 IQ3_S, the same files and pack as the two earlier reports (hashes in the 2026-10-05 README); MTP draft layer prepared
 with the repository's tools; the repository's `data/expert-profile.bin`. No vision encoder, no calibration, no speed
 projection.
